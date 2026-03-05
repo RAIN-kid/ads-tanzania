@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const servicesData = [
   {
@@ -29,7 +29,7 @@ const servicesData = [
 ];
 
 // Animation Variants kwa ajili ya Kadi Kudondoka Moja Baada ya Nyingine
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -37,14 +37,13 @@ const containerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, x: 50 },
   visible: { 
     opacity: 1, x: 0,
     transition: { type: "spring", bounce: 0.4, duration: 0.8 }
   }
 };
-
 export default function Services() {
   return (
     // Background imerudi kwenye Off-White (#FAFBFF) ili kutofautiana na ile nyeupe ya About
